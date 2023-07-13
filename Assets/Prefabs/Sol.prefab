@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2225548825112604493}
   - component: {fileID: 2225548825112604492}
   - component: {fileID: 2225548825112604491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sol
   m_TagString: Sol
   m_Icon: {fileID: 0}

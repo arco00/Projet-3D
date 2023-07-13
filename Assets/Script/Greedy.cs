@@ -35,6 +35,14 @@ private bool reboot=false;
 
     void Update(){ 
         NavMeshPath path = new NavMeshPath();
+
+        if (Vector3.Distance(transform.position,Manager.instance.player.transform.position)>=100){
+            navMesh.enabled=false;
+            return;       
+        }
+        else{
+            navMesh.enabled=true;
+        }
         
         if (target==null && reboot){
             // mvt aléatoire
@@ -58,6 +66,8 @@ private bool reboot=false;
         }
         
         timer+=Time.deltaTime;
+
+        
     }
 
    

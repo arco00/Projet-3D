@@ -5,10 +5,6 @@ using UnityEngine;
 public class Saut : MonoBehaviour
 {
         public bool réponse;
-
-
-   
-
     // Update is called once per frame
     private void OnTriggerStay(Collider other)
     {

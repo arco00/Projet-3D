@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4155192029652962933}
   - component: {fileID: 883784808231501042}
   - component: {fileID: 4933315030133640667}
+  - component: {fileID: 3220429195808668054}
   m_Layer: 0
   m_Name: Greedy
   m_TagString: Untagged
@@ -126,7 +127,7 @@ SphereCollider:
   m_GameObject: {fileID: 3775944662865835359}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -142,7 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55171f1f872ebd469d94efd8d56f901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
   navMesh: {fileID: 4933315030133640667}
 --- !u!195 &4933315030133640667
 NavMeshAgent:
@@ -166,3 +166,17 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &3220429195808668054
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3775944662865835359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.4, z: 0}

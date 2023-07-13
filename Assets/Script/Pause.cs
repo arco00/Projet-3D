@@ -13,7 +13,7 @@ public class Pause : MonoBehaviour
             
             if (paused){
                 Debug.Log("Pause!!");
-                 Cursor.lockState=CursorLockMode.Locked;
+                Utile.Unpause();
                 //enlever la pause
                 retour();
             }
@@ -31,6 +31,7 @@ public class Pause : MonoBehaviour
     }
     public void retour(){
         pauseMenu.SetActive(false);
+        Utile.Unpause();
         Time.timeScale=1f;
         paused=false;
     }

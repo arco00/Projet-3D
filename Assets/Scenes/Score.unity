@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 537880947}
   - component: {fileID: 537880946}
-  - component: {fileID: 537880945}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -141,21 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &537880945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537880944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f055ed7c8a8833e4fb7f9641fe5ed9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 10
-  combo: 0
-  timeCombo: 0
 --- !u!114 &537880946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1790f0dd5a6f82344a0e307fc5c5e8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreAff: {fileID: 1021739942}
+  scoreAff: {fileID: 1021739942}
 --- !u!4 &537880947
 Transform:
   m_ObjectHideFlags: 0

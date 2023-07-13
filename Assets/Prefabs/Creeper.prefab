@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7681191971422219723}
   - component: {fileID: 7033622156128538236}
   - component: {fileID: -7043631714116095029}
+  - component: {fileID: 3801872188680855734}
   m_Layer: 0
   m_Name: Creeper
   m_TagString: Untagged
@@ -139,7 +140,7 @@ SphereCollider:
   m_GameObject: {fileID: 5755286286882668856}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -165,3 +166,17 @@ NavMeshAgent:
   m_BaseOffset: 0.75
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &3801872188680855734
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755286286882668856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.4, z: 0}

@@ -24,10 +24,14 @@ public static class Utile
     }
 
     public static void Damage(){
-        Saver.instance.hP--;
-        Object.Destroy(Saver.instance.life[Saver.instance.hP]);
-        if (Saver.instance.hP==0){
+        Manager.instance.hP--;
+        Object.Destroy(Manager.instance.life[Manager.instance.hP]);
+        if (Manager.instance.hP==0){
             SceneManager.LoadScene("Score");
+            Cursor.lockState=CursorLockMode.Confined;
         }
     }
+     public static void Unpause(){
+        Cursor.lockState=CursorLockMode.Locked;
+     }
 }

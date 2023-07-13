@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4468953841546439702}
   - component: {fileID: 4468953841546439701}
   - component: {fileID: 4468953841546439700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Invible Wall
   m_TagString: Mur
   m_Icon: {fileID: 0}

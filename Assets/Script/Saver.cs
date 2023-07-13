@@ -8,13 +8,15 @@ public class Saver : MonoBehaviour
     public int score;
     public int combo;
     public float timeCombo;
-    public int hP =4;
-    public GameObject[]life ;
    
     void Awake()
     {
+        if(Saver.instance==null){
         instance=this;
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);}
+        else{
+            Destroy(gameObject);
+        }
     }
 
   

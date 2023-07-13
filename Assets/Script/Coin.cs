@@ -31,8 +31,8 @@ public class Coin : MonoBehaviour
         if(other.tag=="Player"){
             Object.Destroy(gameObject);
             Saver.instance.score=Saver.instance.score+valeur+Saver.instance.combo;
-            if(valeur!=2){
-                //pour pas déclancher un jackpot avec un jackpot
+            if(valeur!=2 && valeur!=-2){
+                //pour pas déclancher un jackpot avec une pièce de jackpot ou une pièce de valeur négative
                 //Debug.Log(Save.Score);
                 Saver.instance.timeCombo=0;
                 Saver.instance.combo+=1;

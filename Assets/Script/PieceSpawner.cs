@@ -14,11 +14,14 @@ public class PieceSpawner : MonoBehaviour
     private Quaternion rotation=new Quaternion(90,90,0,1);
     private Vector3 spawn =new Vector3(-50,35,50); private Vector3 size =new Vector3(200,2,200);
     public float puissance;
+    public Transform dossier ;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J)){Jackpot();} //pour tester le jackpot
-        //if (Input.GetKeyDown(KeyCode.L)){Ligne();} //pour tester la ligne 
+        //if (Input.GetKeyDown(KeyCode.J)){Jackpot();} //pour tester le jackpot
+        //if (Input.GetKeyDown(KeyCode.L)){Ligne();} //pour tester la ligne
+        //if (Input.GetKeyDown(KeyCode.Y)) {Utile.Damage();Utile.Damage();Utile.Damage();Utile.Damage();} // pour le suicide de test
+
         // gestion du spawn 
         timeSpawn=timeSpawn+Time.deltaTime;
         if (timeSpawn>spawnRate){
@@ -45,7 +48,7 @@ public class PieceSpawner : MonoBehaviour
     }
 
     void Spawn(Vector3 position){
-        GameObject newPiece=Instantiate (pièce,position,rotation);
+        GameObject newPiece=Instantiate (pièce,position,rotation,dossier);
         newPiece.GetComponent<Coin>().valeur=ListValeur[Random.Range(0,ListValeur.Length)];
         newPiece.GetComponent<Coin>().lifeTime=timeNormalPiece;
         //new Pieces(ListValeur[Random.Range(0,ListValeur.Length)],5,true);
@@ -56,7 +59,7 @@ public class PieceSpawner : MonoBehaviour
         Debug.Log("Jackpot!");
         for (int i = 0; i < 50; i++)
         {
-            GameObject newPiece=Instantiate (pièce,spawn,rotation);
+            GameObject newPiece=Instantiate (pièce,spawn,rotation,dossier);
             newPiece.GetComponent<Coin>().lifeTime=timeJackpotPiece;
             newPiece.GetComponent<Coin>().valeur=2;
             newPiece.GetComponent<Rigidbody>().AddForce(Utile.RngVector(puissance),ForceMode.VelocityChange);
@@ -66,7 +69,7 @@ public class PieceSpawner : MonoBehaviour
         //spawn 5 mauvaise piece
         for (int i = 0; i < 5; i++)
         {
-            GameObject newPiece= Instantiate(pièce,spawn,rotation);
+            GameObject newPiece= Instantiate(pièce,spawn,rotation,dossier);
             newPiece.GetComponent<Coin>().lifeTime=timeJackpotPiece;
             newPiece.GetComponent<Coin>().valeur=-2;
             newPiece.GetComponent<Rigidbody>().AddForce(Utile.RngVector(puissance),ForceMode.VelocityChange);

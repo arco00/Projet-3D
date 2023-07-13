@@ -31,9 +31,11 @@ public class Mouvement : MonoBehaviour
 
         if(Input.GetKey(KeyCode.A)){
             rVitesse=2*vitesse;
+            animator.SetBool("IsRunning",true);
         }
         else{
             rVitesse=vitesse;
+            animator.SetBool("IsRunning",false);
         }
 
 
@@ -62,7 +64,7 @@ public class Mouvement : MonoBehaviour
 
         //mouvement souris
         objet.transform.eulerAngles+= new Vector3(0,Input.GetAxis("Mouse X"),0);
-        rota.transform.eulerAngles+= new Vector3(Input.GetAxis("Mouse Y"),0,0);
+        rota.transform.position+= new Vector3(Input.GetAxis("Mouse Y"),0,0);
 
           
     }
