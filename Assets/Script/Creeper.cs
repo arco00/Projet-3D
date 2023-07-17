@@ -29,12 +29,14 @@ private bool reboot = false;
             if(caC.gameObject.transform.position.y>transform.position.y){
                 //si le joueur est + haut il tu le mob 
                 Object.Destroy(gameObject);
+                Utile.LancerSon("CreeperDeath",Saver.instance.listSon);
             }
             else{
                 //réduction du score et destruction du creeper
                 Utile.Damage();
                 Object.Destroy(gameObject);
                 Debug.Log("touché");
+                Utile.LancerSon("CreeperDgm",Saver.instance.listSon);
             }
         }
         else if (caC.gameObject.tag=="Sol" && !reboot){

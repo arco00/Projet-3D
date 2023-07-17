@@ -7,12 +7,14 @@ public class Mouvement : MonoBehaviour
 {
     public GameObject objet ;
     public GameObject rota;
-    public float puissanceSaut ;
-    public float vitesse ;
+    
     private float rVitesse;
     public Animator animator;
     private CharacterController controller;
     private Vector3 desiredVelocity = new Vector3(0,0,0);
+    public Configuration configSon;
+    public Configuration config;
+    public GameObject son;
     
 
     // Start is called before the first frame update
@@ -30,11 +32,11 @@ public class Mouvement : MonoBehaviour
         return;
 
         if(Input.GetKey(KeyCode.A)){
-            rVitesse=2*vitesse;
+            rVitesse=2*config.vitesse;
             animator.SetBool("IsRunning",true);
         }
         else{
-            rVitesse=vitesse;
+            rVitesse=config.vitesse;
             animator.SetBool("IsRunning",false);
         }
 
@@ -53,7 +55,8 @@ public class Mouvement : MonoBehaviour
         
         //saut
         if(Input.GetKeyDown(KeyCode.Space)&&controller.isGrounded){
-            desiredVelocity.y=puissanceSaut;
+            desiredVelocity.y=config.puissanceSaut;
+            Utile.LancerSon("Jump",Saver.instance.listSon);
         }
 
         controller.Move(desiredVelocity*Time.deltaTime);

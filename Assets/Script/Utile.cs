@@ -26,12 +26,28 @@ public static class Utile
     public static void Damage(){
         Manager.instance.hP--;
         Object.Destroy(Manager.instance.life[Manager.instance.hP]);
+        //test de mort
         if (Manager.instance.hP==0){
             SceneManager.LoadScene("Score");
             Cursor.lockState=CursorLockMode.Confined;
+            Utile.LancerSon("Fin",Saver.instance.listSon);
         }
     }
+
      public static void Unpause(){
         Cursor.lockState=CursorLockMode.Locked;
+     }
+
+     public static void LancerSon(string name,GameObject son){
+        AudioSource[] childComponents = son.GetComponentsInChildren<AudioSource>();
+        // Recherche l'enfant spécifique avec le nom "ChildObjectName"
+        foreach (AudioSource childComponent in childComponents)
+        {
+            if (childComponent.gameObject.name == name)
+            {
+                childComponent.Play();
+                break; // Sortir de la boucle après avoir trouvé l'enfant souhaité
+            }
+        }
      }
 }

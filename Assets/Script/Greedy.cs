@@ -25,6 +25,7 @@ private bool reboot=false;
             Debug.Log("de la pièce");
             full+=caC.gameObject.GetComponent<Coin>().valeur;
             Object.Destroy(caC.gameObject);
+            Utile.LancerSon("GreedyPickUp",Saver.instance.listSon);
         }
         else if (caC.gameObject.tag=="Sol" && !reboot){
             GetComponent<UnityEngine.AI.NavMeshAgent> ().enabled=false;
@@ -60,9 +61,11 @@ private bool reboot=false;
             navMesh.SetDestination(target.transform.position);
         }
 
+        //si il a manger assez de pièèces
         if (full>=50){
             Utile.Damage();
             Object.Destroy(gameObject);
+            Utile.LancerSon("GreedyExplo",Saver.instance.listSon);
         }
         
         timer+=Time.deltaTime;

@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
+    public Configuration config ;
    public static Manager instance ;
-   public int hP =4;
+   public int hP ;
     public GameObject[]life ;
     public GameObject player;
+    public int combo;
+    public float timeCombo;
+    public bool cheat;
+    
+    void Awake(){
+        instance=this;
+        hP=config.hP;
+    }
 }

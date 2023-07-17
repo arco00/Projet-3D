@@ -6,8 +6,7 @@ public class Saver : MonoBehaviour
 {
     public static Saver instance ;
     public int score;
-    public int combo;
-    public float timeCombo;
+    public GameObject listSon;
    
     void Awake()
     {

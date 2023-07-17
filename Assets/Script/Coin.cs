@@ -30,13 +30,14 @@ public class Coin : MonoBehaviour
         //Debug.Log("piece touché");
         if(other.tag=="Player"){
             Object.Destroy(gameObject);
-            Saver.instance.score=Saver.instance.score+valeur+Saver.instance.combo;
+            Utile.LancerSon("Pieces",Saver.instance.listSon);
+            Saver.instance.score=Saver.instance.score+valeur+Manager.instance.combo;
             if(valeur!=2 && valeur!=-2){
                 //pour pas déclancher un jackpot avec une pièce de jackpot ou une pièce de valeur négative
                 //Debug.Log(Save.Score);
-                Saver.instance.timeCombo=0;
-                Saver.instance.combo+=1;
-                Debug.Log("combo:"+Saver.instance.combo);
+                Manager.instance.timeCombo=0;
+                Manager.instance.combo+=1;
+                Debug.Log("combo:"+Manager.instance.combo);
             }
         }
         else if (other.tag!="Piece"){

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd95319de282434f958512c1f730ed6, type: 3}
+  m_Name: New Configuration
+  m_EditorClassIdentifier: 
+  hP: 4
+  comboExpire: 2
+  comboNeeded: 10
+  comboBonus: 50
+  spawnRate: 0.5
+  jackpotSize: 100
+  ligneSize: 10
+  timeJackpotPiece: 45
+  timeNormalPiece: 45
+  puissanceVectorSpawner: 10
+  timeSpawnMob: 15
+  creeper: {fileID: 5755286286882668856, guid: bc503a728565fe34bb29efea36fccc21, type: 3}
+  greedy: {fileID: 3775944662865835359, guid: 4ae7a9ff08a0024439baff0b6f1d5ad7, type: 3}
+  puissanceSaut: 12
+  vitesse: 10
