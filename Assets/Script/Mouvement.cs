@@ -13,6 +13,7 @@ public class Mouvement : MonoBehaviour
     public Configuration configSon;
     public Configuration config;
     public GameObject son;
+
     
 
     // Start is called before the first frame update
@@ -68,6 +69,9 @@ public class Mouvement : MonoBehaviour
         rota.transform.position+= new Vector3(Input.GetAxis("Mouse Y"),0,0);
 
           
+    }
+    public void sound(){
+        Utile.LancerSon("Pas",Saver.instance.listSon);
     }
 }
    
