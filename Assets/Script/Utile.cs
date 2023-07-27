@@ -30,12 +30,14 @@ public static class Utile
         if (Manager.instance.hP==0){
             SceneManager.LoadScene("Score");
             Cursor.lockState=CursorLockMode.Confined;
+            Cursor.visible=true;
             Utile.LancerSon("Fin",Saver.instance.listSon);
         }
     }
 
      public static void Unpause(){
         Cursor.lockState=CursorLockMode.Locked;
+        Cursor.visible=false;
      }
 
      public static void LancerSon(string name,GameObject son){
@@ -50,4 +52,7 @@ public static class Utile
             }
         }
      }
+
+
+     
 }

@@ -136,17 +136,23 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 995edc6a35121b94ea38f1b46556357d
+    name: FX
+  - guid: 356988a10eba2734aa6b4e4dec320947
+    name: Master
+  - guid: b96ca56e3f029934e95f9911e27df404
+    name: Music
   m_AudioMixerGroupViews:
   - guids:
     - 4d438f985f9676a4286f4900b69e19ac
     - 7662a46d07efc734e8d639262f1f6454
+    - 048985a1c6251c042b4878331c1fdf99
+    - 5768f66adbbe9514da1f9f7371e3234b
     - a03b77aefc57a324da99636f76792d2a
     - 66e41f553abdf5f4ba17f66cb5718c06
     - a2d8e2f932f59ed4a84b41543abd2c70
     - 08d5eb421ac3f8d4f9c59657433772f8
-    - 048985a1c6251c042b4878331c1fdf99
-    - 5768f66adbbe9514da1f9f7371e3234b
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}

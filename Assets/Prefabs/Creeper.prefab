@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3150326910085114284}
   - component: {fileID: 9133782113679930915}
   - component: {fileID: 8019316724197074206}
-  - component: {fileID: 1888450119822086075}
   - component: {fileID: 7681191971422219723}
   - component: {fileID: 7033622156128538236}
   - component: {fileID: -7043631714116095029}
   - component: {fileID: 3801872188680855734}
+  - component: {fileID: -43598153157847152}
   m_Layer: 0
   m_Name: Creeper
   m_TagString: Untagged
@@ -102,19 +102,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 25
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1888450119822086075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5755286286882668856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f465b009b9f948c44af0bc2cafe403ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navMesh: {fileID: -7043631714116095029}
 --- !u!54 &7681191971422219723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -180,3 +167,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.4, z: 0}
+--- !u!114 &-43598153157847152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755286286882668856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a00bc5e0d226124d881dd8a436b9b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMesh: {fileID: -7043631714116095029}

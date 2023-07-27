@@ -3,30 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Creeper : MonoBehaviour
+public class Creeper1 : Enemy
 {
-private GameObject target;
-private Vector3 spawn =new Vector3(-50,35,50); private Vector3 size =new Vector3(200,2,200);
-public NavMeshAgent navMesh;
-private float timer;
-private bool reboot = false;
- 
-    // Start is called before the first frame update
-    void OnTriggerStay(Collider other){
-        if (other.gameObject.tag=="Player"){
+    public override void TriggerStayBehaviour(Collider other)
+    {
+         if (other.gameObject.tag=="Player"){
             target=other.gameObject;
         }
     }
-
     void OnTriggerExit(Collider other){
         if (other.gameObject.tag=="Player"){
             target=null;
         }
     }
-        //quand on touche le joueur
-    void OnCollisionEnter(Collision caC){
+    public override void CollisionBehaviour(Collision caC)
+    {
+    
         if (caC.gameObject.tag=="Player"){
-            if(caC.gameObject.transform.position.y>transform.position.y){
+            if(caC.gameObject.transform.position.y>transform.position.y+2){
                 //si le joueur est + haut il tu le mob 
                 Object.Destroy(gameObject);
                 Utile.LancerSon("CreeperDeath",Saver.instance.listSon);
@@ -45,14 +39,13 @@ private bool reboot = false;
             reboot=true;
         }
     }
-  
 
-   
-    void Update(){ 
-        //GetComponent<UnityEngine.AI.NavMeshAgent> ().Warp (transform.position)
+
+    public override void UpdateBehaviour()
+    {
         NavMeshPath path = new NavMeshPath();
 
-        if(target != null && reboot){
+        if(target != null && reboot ){
 
             navMesh.SetDestination(target.transform.position);
         }
@@ -69,9 +62,7 @@ private bool reboot = false;
           timer+=Time.deltaTime;
             
         }
-        
     }
-
 }
 
 

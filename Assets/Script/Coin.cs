@@ -51,6 +51,7 @@ public class Coin : MonoBehaviour
         if(timer>lifeTime){
             Object.Destroy(gameObject);
         }
+        
     
     }
 }
